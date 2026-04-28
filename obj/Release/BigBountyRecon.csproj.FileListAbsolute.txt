@@ -7,3 +7,13 @@ C:\Users\VM\Documents\Work\BigBountyRecon\BigBountyRecon\obj\Release\BigBountyRe
 C:\Users\VM\Documents\Work\BigBountyRecon\BigBountyRecon\obj\Release\BigBountyRecon.exe
 C:\Users\VM\Documents\Work\BigBountyRecon\BigBountyRecon\obj\Release\BigBountyRecon.pdb
 C:\Users\VM\Documents\Work\BigBountyRecon\BigBountyRecon\obj\Release\BigBountyRecon.csprojAssemblyReference.cache
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\bin\Release\BigBountyRecon.exe.config
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\bin\Release\BigBountyRecon.exe
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\bin\Release\BigBountyRecon.pdb
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.csproj.AssemblyReference.cache
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.Form1.resources
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.Properties.Resources.resources
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.csproj.GenerateResource.cache
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.csproj.CoreCompileInputs.cache
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.exe
+C:\Users\vipha\Downloads\BigBountyRecon-main\BigBountyRecon-main\obj\Release\BigBountyRecon.pdb

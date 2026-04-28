@@ -1,5 +1,5 @@
-# BigBountyRecon
-BigBountyRecon tool utilises 58 different techniques using various Google dorks and open source tools to expedite the process of initial reconnaissance on the target organisation. Reconnaissance is the most important step in any penetration testing or a bug hunting process. It provides an attacker with some preliminary knowledge on the target organisation. Furthermore, it will be useful to gain insights into what controls are in place as well as some rough estimations on the security maturity level of the target organisation. 
+# BigBountyRecon (VIPHACKER100 Edition)
+BigBountyRecon tool utilises **66** different techniques using various Google dorks and open source tools to expedite the process of initial reconnaissance on the target organisation. This edition features a premium dark theme, automated "TOP 5" scanning, and expanded detection for modern cloud environments and credential leaks.
 
 This tool can be used in addition to your usual approach for bug hunting. The idea is to quickly check and gather information about your target organisation without investing time and remembering these syntaxes. In addition, it can help you define an approach towards finding some quick wins on the target.
 
@@ -122,6 +122,22 @@ Any suggestions or ideas for this tool are welcome - just tweet me on [@ManiarVi
 
 55. What CMS: Identify the version and type of CMS used by a target organisation for targeted enumeration and exploit research.
 
+56. Exposed .env Files: Scans for environment configuration files which often contain database credentials, API keys, and other secrets.
+
+57. Exposed SSH Keys: Searches for private keys (.pem, .key) and public keys inadvertently exposed on the target's infrastructure.
+
+58. Firebase Databases: Identifies potentially misconfigured Firebase instances related to the target.
+
+59. Azure Storage: Specifically targets Azure Blob Storage and core.windows.net endpoints.
+
+60. Exposed Jenkins: Searches for Jenkins CI/CD dashboards which can be a gateway to the entire build pipeline if unauthenticated.
+
+61. Swagger UI: Finds API documentation endpoints (Swagger/OpenAPI) that reveal internal API structures.
+
+62. Docker/K8s Config: Locates Docker or Kubernetes configuration files that might leak container orchestration details.
+
+63. Wayback Machine List: Generates a complete index of all archived URLs for the target using the Archive.org CDX API.
+
 # Screenshots
 
 Search for plaintext passwords for a target organisation:
@@ -143,15 +159,19 @@ Verifying if the URL contains extenstion of ".do":
 
 # How to use this tool?
 
-Step1: Download the file from Release section: https://github.com/Viralmaniar/BigBountyRecon/releases/download/v0.1/BigBountyRecon.exe
+Step1: Download the file from the Release section or build from source.
 
-Step2: Run the EXE file
+Step2: Run the `BigBountyRecon.exe` file.
 
-Step3: Enter the target domain
+Step3: Enter the target domain in the textbox (e.g., `example.com`).
 
-Step4: Click on different buttons in the tool to find information
+Step4: Use the **CLEAR** button to reset the target field quickly.
 
-Step5: In case of Google Captcha simply click on the puzzle and move ahead
+Step5: Use the **TOP 5 SCAN** button for an automated search of high-value targets (Directory Listing, .env, SSH Keys, GitHub, and Shodan).
+
+Step6: Click on individual buttons to deep-dive into specific techniques.
+
+Step7: In case of Google Captcha, simply click on the puzzle and move ahead.
 
 # Questions?
 

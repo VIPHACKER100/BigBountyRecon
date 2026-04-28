@@ -181,7 +181,19 @@ namespace BigBountyRecon
                 { "button37", new SearchQuery("SharePoint", "https://www.google.com/search?q=.sharepoint.com/_vti_bin/webpartpages/asmx -docs -msdn -mdsec site:{0}") },
 
                 // WSDL Files
-                { "button38", new SearchQuery("WSDL Files", "https://www.google.com/search?q=site:{0} filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/sites.asmx?wsdl | inurl:_vti_bin/sites.asmx?wsdl") }
+                { "button38", new SearchQuery("WSDL Files", "https://www.google.com/search?q=site:{0} filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/sites.asmx?wsdl | inurl:_vti_bin/sites.asmx?wsdl") },
+
+                // New Techniques
+                { "button59", new SearchQuery("Exposed .env Files", "https://www.google.com/search?q=site:{0} ext:env | inurl:.env | \"DB_PASSWORD\"") },
+                { "button60", new SearchQuery("Exposed SSH Keys", "https://www.google.com/search?q=site:{0} ext:pem | ext:key | ext:pub | \"BEGIN RSA PRIVATE KEY\"") },
+                { "button61", new SearchQuery("Firebase Databases", "https://www.google.com/search?q=site:firebaseio.com \"{0}\"") },
+
+                // More Advanced Techniques
+                { "button62", new SearchQuery("Azure Storage", "https://www.google.com/search?q=site:core.windows.net \"{0}\"") },
+                { "button63", new SearchQuery("Exposed Jenkins", "https://www.google.com/search?q=site:{0} intitle:Jenkins | inurl:jenkins") },
+                { "button64", new SearchQuery("Swagger UI", "https://www.google.com/search?q=site:{0} inurl:swagger | inurl:openapi | intitle:swagger") },
+                { "button65", new SearchQuery("Docker/K8s Config", "https://www.google.com/search?q=site:{0} inurl:config | inurl:kube | inurl:docker") },
+                { "button66", new SearchQuery("Wayback Machine List", "https://web.archive.org/cdx/search?url=*.{0}/*&output=text&fl=original&collapse=urlkey") }
             };
         }
     }

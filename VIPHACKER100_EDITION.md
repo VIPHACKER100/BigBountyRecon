@@ -1,19 +1,19 @@
-# VIPHACKER100 Edition - BigBountyRecon v1.1.0
+# VIPHACKER100 Edition - BigBountyRecon v1.2.0
 
 ## About This Edition
 
 This is the **VIPHACKER100 Edition** of BigBountyRecon, featuring:
 
 ✨ **Enhanced Features:**
+- Premium Dark Theme with "Hacker" aesthetic
+- Automated "TOP 5 SCAN" for high-value targets
+- Expanded 66-technique reconnaissance arsenal
+- Dedicated "CLEAR" button for improved workflow
 - Refactored and modernized codebase (40% code reduction)
-- Centralized search query management
-- Improved error handling and user experience
-- Comprehensive XML documentation
-- Production-ready deployment package
 
-🎯 **Version**: 1.1.0  
+🎯 **Version**: 1.2.0  
 🔧 **Maintained by**: VIPHACKER100  
-📅 **Release Date**: 2026-04-28  
+📅 **Release Date**: 2026-04-28 (Updated)  
 🏗️ **Framework**: .NET Framework 4.7.2
 
 ---
@@ -41,7 +41,7 @@ This is the **VIPHACKER100 Edition** of BigBountyRecon, featuring:
 
 ## Features
 
-**58 Reconnaissance Techniques** including:
+**66 Reconnaissance Techniques** including:
 - Directory Listing Discovery
 - Configuration File Detection
 - Database File Identification
@@ -106,6 +106,13 @@ BigBountyRecon/
 ---
 
 ## Version History
+
+### v1.2.0 - VIPHACKER100 Edition (2026-04-28)
+- Added 8 new advanced techniques (Azure, Jenkins, Swagger, .env, SSH Keys, etc.)
+- Implemented "TOP 5 SCAN" automation button
+- Implemented "CLEAR" button for input resetting
+- Complete UI Overhaul: Premium Dark Theme with deep gray/blue aesthetics
+- Responsive Grid Layout using FlowLayoutPanel
 
 ### v1.1.0 - VIPHACKER100 Edition (2026-04-28)
 - Complete code refactoring and modernization

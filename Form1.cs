@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -23,11 +23,39 @@ namespace BigBountyRecon
         }
 
         /// <summary>
-        /// Initializes the search query dictionary from ReconSearchProvider.
+        /// Initializes the search query dictionary and populates button UI.
         /// </summary>
         private void InitializeSearchQueries()
         {
             searchQueries = ReconSearchProvider.GetSearchQueries();
+
+            // Populate button text and add hover effects
+            foreach (var entry in searchQueries)
+            {
+                string buttonName = entry.Key;
+                SearchQuery query = entry.Value;
+
+                System.Reflection.FieldInfo field = this.GetType().GetField(buttonName, 
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                
+                if (field != null)
+                {
+                    if (field.GetValue(this) is Button button)
+                    {
+                        button.Text = query.Name;
+                        
+                        // Add hover effects
+                        button.MouseEnter += (s, e) => {
+                            button.BackColor = System.Drawing.Color.FromArgb(0, 122, 204);
+                            button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(0, 150, 255);
+                        };
+                        button.MouseLeave += (s, e) => {
+                            button.BackColor = System.Drawing.Color.FromArgb(45, 45, 48);
+                            button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(64, 64, 64);
+                        };
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -129,6 +157,47 @@ namespace BigBountyRecon
         private void button56_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
         private void button57_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
         private void button58_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button59_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button60_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button61_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button62_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button63_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button64_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button65_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+        private void button66_Click(object sender, EventArgs e) => GenericButtonClick(sender, e);
+
+        /// <summary>
+        /// Performs a high-value reconnaissance scan using the top 5 most useful techniques.
+        /// </summary>
+        private void top5Button_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Please enter a target domain.", "Input Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string[] top5 = { "button9", "button59", "button60", "button25", "button39" };
+            
+            foreach (string btnName in top5)
+            {
+                if (searchQueries.ContainsKey(btnName))
+                {
+                    SearchQuery query = searchQueries[btnName];
+                    SearchQueryBuilder.BuildAndExecuteSearch(query.UrlTemplate, textBox1.Text);
+                    // Small delay to avoid browser congestion if needed, but Process.Start is usually fine
+                }
+            }
+        }
+
+        /// <summary>
+        /// Clears the target domain textbox.
+        /// </summary>
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+        }
 
         /// <summary>
         /// Opens the creator's Twitter profile.

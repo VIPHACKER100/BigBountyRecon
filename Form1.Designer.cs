@@ -32,9 +32,82 @@ namespace BigBountyRecon
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.headerLabel = new System.Windows.Forms.Label();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.top5Button = new System.Windows.Forms.Button();
+            this.titlePanel.SuspendLayout();
+            this.SuspendLayout();
 
-            // Initialize all 58 buttons
-            for (int i = 1; i <= 58; i++)
+            // titlePanel
+            this.titlePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.titlePanel.Controls.Add(this.headerLabel);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(1024, 60);
+            this.titlePanel.TabIndex = 1001;
+
+            // headerLabel
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.headerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.headerLabel.Location = new System.Drawing.Point(12, 12);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(450, 32);
+            this.headerLabel.TabIndex = 0;
+            this.headerLabel.Text = "BigBountyRecon v1.1.0 - VIPHACKER100";
+
+            // textBox1
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(18, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(760, 29);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "example.com";
+
+            // clearButton
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.clearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(906, 75);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(100, 29);
+            this.clearButton.TabIndex = 1003;
+            this.clearButton.Text = "CLEAR";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+
+            // top5Button
+            this.top5Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.top5Button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.top5Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.top5Button.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.top5Button.ForeColor = System.Drawing.Color.White;
+            this.top5Button.Location = new System.Drawing.Point(785, 75);
+            this.top5Button.Name = "top5Button";
+            this.top5Button.Size = new System.Drawing.Size(115, 29);
+            this.top5Button.TabIndex = 1004;
+            this.top5Button.Text = "TOP 5 SCAN";
+            this.top5Button.UseVisualStyleBackColor = false;
+            this.top5Button.Click += new System.EventHandler(this.top5Button_Click);
+
+            // flowLayoutPanel1
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(18, 120);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(988, 530);
+            this.flowLayoutPanel1.TabIndex = 1002;
+
+            // Initialize all buttons
+            for (int i = 1; i <= 66; i++)
             {
                 System.Reflection.FieldInfo field = this.GetType().GetField($"button{i}", 
                     System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
@@ -43,28 +116,28 @@ namespace BigBountyRecon
                     var btn = new System.Windows.Forms.Button();
                     field.SetValue(this, btn);
                     btn.Name = $"button{i}";
-                    btn.Text = i.ToString();
-                    btn.Size = new System.Drawing.Size(80, 80);
+                    btn.Text = "Query " + i;
+                    btn.Size = new System.Drawing.Size(185, 45);
                     btn.TabIndex = i;
-                    this.Controls.Add(btn);
+                    btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    btn.FlatAppearance.BorderSize = 1;
+                    btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+                    btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+                    btn.ForeColor = System.Drawing.Color.White;
+                    btn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    this.flowLayoutPanel1.Controls.Add(btn);
                 }
             }
 
-            // textBox1
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(900, 20);
-            this.textBox1.TabIndex = 0;
-
             // label1
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 670);
+            this.label1.Location = new System.Drawing.Point(15, 670);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 1000;
             this.label1.Text = "@ManiarViral";
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.label1.Click += new System.EventHandler(this.label1_Click);
 
             // Wire up all button click handlers
@@ -126,14 +199,33 @@ namespace BigBountyRecon
             if (this.button56 != null) this.button56.Click += new System.EventHandler(this.button56_Click);
             if (this.button57 != null) this.button57.Click += new System.EventHandler(this.button57_Click);
             if (this.button58 != null) this.button58.Click += new System.EventHandler(this.button58_Click);
+            if (this.button59 != null) this.button59.Click += new System.EventHandler(this.button59_Click);
+            if (this.button60 != null) this.button60.Click += new System.EventHandler(this.button60_Click);
+            if (this.button61 != null) this.button61.Click += new System.EventHandler(this.button61_Click);
+            if (this.button62 != null) this.button62.Click += new System.EventHandler(this.button62_Click);
+            if (this.button63 != null) this.button63.Click += new System.EventHandler(this.button63_Click);
+            if (this.button64 != null) this.button64.Click += new System.EventHandler(this.button64_Click);
+            if (this.button65 != null) this.button65.Click += new System.EventHandler(this.button65_Click);
+            if (this.button66 != null) this.button66.Click += new System.EventHandler(this.button66_Click);
 
             // Form1
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ClientSize = new System.Drawing.Size(1024, 700);
+            this.Controls.Add(this.top5Button);
+            this.Controls.Add(this.clearButton);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.titlePanel);
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BigBountyRecon - Reconnaissance Tool [Powered by VIPHACKER100]";
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
@@ -143,8 +235,13 @@ namespace BigBountyRecon
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label headerLabel;
+        private System.Windows.Forms.Panel titlePanel;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button top5Button;
         
-        // Declare all 58 buttons
+        // Declare all buttons
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -203,6 +300,14 @@ namespace BigBountyRecon
         private System.Windows.Forms.Button button56;
         private System.Windows.Forms.Button button57;
         private System.Windows.Forms.Button button58;
+        private System.Windows.Forms.Button button59;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.Button button61;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button button63;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private System.Windows.Forms.Button button66;
     }
 }
 

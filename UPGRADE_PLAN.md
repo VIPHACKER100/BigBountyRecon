@@ -3,7 +3,7 @@
 ## Upgrade Summary
 BigBountyRecon has been modernized to improve code maintainability, reduce duplication, and follow best practices in C# development while maintaining compatibility with .NET Framework 4.7.2.
 
-## Upgrade Plan (v1.1.0)
+## Upgrade Plan (v1.2.0)
 
 ### Phase 1: Code Architecture Refactoring ✅ COMPLETE
 - **Objective**: Eliminate code duplication and improve maintainability
@@ -23,6 +23,13 @@ BigBountyRecon has been modernized to improve code maintainability, reduce dupli
 - **Extensibility**: New search queries can be added to ReconSearchProvider without modifying Form1
 - **Testability**: SearchQueryBuilder can now be unit tested independently
 - **Documentation**: Added detailed comments explaining the purpose of each search query
+
+### Phase 4: UI/UX Modernization & Feature Expansion ✅ COMPLETE
+- **Premium Design**: Implemented a "Hacker" aesthetic dark theme using consistent color tokens (#1C1C1C, #2D2D30).
+- **Dynamic Layout**: Replaced manual button positioning with a `FlowLayoutPanel` grid for better organization and responsiveness.
+- **Automation**: Added "TOP 5 SCAN" feature to execute the most critical recon tasks with a single click.
+- **Technique Expansion**: Increased recon tools from 58 to 66, adding cloud (Azure), CI/CD (Jenkins), and modern leak (SSH, .env) detections.
+- **UX Improvements**: Added a "CLEAR" button and fixed text layout for long tool names.
 
 ## Code Changes Summary
 
@@ -158,10 +165,10 @@ msbuild /t:Build /p:Configuration=Release
 ```
 
 ## Version Information
-- **Previous Version**: Original BigBountyRecon
-- **Current Version**: v1.1.0
+- **Previous Version**: v1.1.0
+- **Current Version**: v1.2.0
 - **.NET Framework**: v4.7.2 (unchanged)
-- **Status**: ✅ Upgrade Complete and Ready for Production
+- **Status**: ✅ Upgrade & UI Overhaul Complete
 
 ## Migration Guide
 No migration needed - the upgrade is fully backward compatible. Simply replace the old Form1.cs with the new version and add the two new utility classes to your project.
